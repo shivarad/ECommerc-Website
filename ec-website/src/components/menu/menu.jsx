@@ -49,8 +49,12 @@ class Menu extends React.Component{
         return(
             <div className='menu'  >
                {
-                   this.state.collections.map(({title,id,imageUrl,size})=> <MenuItem key={id} title={title} size={size} bgUrl={imageUrl}/>)
-               }             
+                   this.state.collections.map(({title,id,imageUrl,size,linkUrl})=>
+                     <MenuItem key={id} title={title} size={size} bgUrl={imageUrl} linkUrl={linkUrl}/>)
+                  //  this.state.collections.map(({ id, ...otherSectionProps }) => (
+                  //   <MenuItem key={id} {...otherSectionProps} />
+                  // ))                         *****does not work!!!!****
+                }
             </div>
 
         );
